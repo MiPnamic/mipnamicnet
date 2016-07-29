@@ -19,6 +19,10 @@
       "core-js": "^1.1.4",
       "http-server": "0.9.0",
       "open": "0.0.5"
+    },
+    "buildConfig": {
+      "transpileES6": true,
+      "minify": true
     }
   },
   "dependencies": {
