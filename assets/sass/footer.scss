@@ -1,0 +1,40 @@
+@import 'libs/paletton';
+@import 'libs/vars';
+
+myfooter {
+    flex: 1;
+    order: 3;
+    min-width: 100%;
+
+    footer {
+        margin: 0px;
+        background-color: $rgba-primary-4;
+        padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        ul {
+            padding: 0px;
+            li {
+                color: $white;
+                list-style: none;
+                padding: 0px;
+                display: inline;
+                margin-right: 20px;
+                vertical-align: middle;
+                font-weight: 300;
+            }
+            li:nth-child(n+2):before {
+                content: '|';
+                margin-right: 20px;
+                color: $color-primary-1;
+            }
+        }
+        ul.rights {
+            padding-left: 20px;
+        }
+        i.fa.fa-copyright.fa-rotate-180 {
+            vertical-align: middle;
+            padding-top: 2px;
+        }
+    }
+}

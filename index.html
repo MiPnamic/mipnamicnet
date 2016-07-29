@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>MiPnamic Von Wirklichkeit</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <app></app>
+  <script>
+    var readyForMainLoad
+    if (location.origin.match(/localhost/)) {
+      System.trace = true
+      readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
+        hr = new HotReloader.default('http://localhost:9089');
+      });
+    }
+    Promise.resolve(readyForMainLoad).then(function() {
+      System.import("app").then(function(){ console.log("running") });
+    });
+  </script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+</body>
+</html>

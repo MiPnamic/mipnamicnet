@@ -1,0 +1,107 @@
+@import 'libs/paletton';
+@import 'libs/vars';
+sidebar {
+    flex: 1;
+    order: 2;
+    min-width: 340px;
+    max-width: 340px;
+    aside {
+        height: 100%;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-weight: 300;
+        color: $color-primary-4;
+        background-color: $color-primary-2-2;
+        a,
+        a:active,
+        a:visited,
+        a:link {
+            color: $color-primary-3;
+        }
+        a:hover {
+            color: $color-primary-4;
+        }
+        #header {
+            text-align: center;
+            .image.avatar {
+                display: block;
+                margin-bottom: 20px;
+                img {
+                    border-radius: 100px;
+                    border: 6px solid $color-primary-3;
+                }
+                /* perspective added for flip effect */
+                .coinflip {
+                    -webkit-perspective: 1000;
+                    -moz-perspective: 1000;
+                    -o-perspective: 1000;
+                    perspective: 1000;
+                }
+            }
+            .image.avatar:hover .coinflip{
+                -webkit-transform: rotateY(720deg);
+                -moz-transform: rotateY(720deg);
+                -o-transform: rotateY(720deg);
+                transform: rotateY(720deg);
+            }
+            .coinflip {
+                -webkit-transition: 0.6s;
+                -webkit-transform-style: preserve-3d;
+
+                -moz-transition: 0.6s;
+                -moz-transform-style: preserve-3d;
+
+                -o-transition: 0.6s;
+                -o-transform-style: preserve-3d;
+
+                transition: 0.6s;
+                transform-style: preserve-3d;
+
+                position: relative;
+            }
+        }
+        hr {
+            border: 0px;
+            height: 1px;
+            background-color: $color-primary-3;
+        }
+        #socials {
+            display: table;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            ul {
+                margin: 0 auto;
+                padding: 0;
+                li {
+                    text-align: center;
+                    list-style: none;
+                    display: inline;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        summary {
+            padding-top: 20px;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        #gitlog {
+            ul {
+                padding-left: 10px;
+                li {
+                    list-style: none;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

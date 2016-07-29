@@ -1,0 +1,42 @@
+@import 'libs/paletton';
+@import 'libs/vars';
+
+projects {
+    .project-list {
+        height: 310px;
+        
+        .projects {
+                
+        }
+        //width: 1500px;
+        article {
+            background-color: $color-secondary-2-2;
+            height: 300px;
+            color: $color-secondary-1-4;
+            font-weight: 300;
+            border-radius: 40px;
+
+            header {
+                background-color: transparent;
+                h1 {
+                    font-weight: 400;
+                    color: $color-primary-4;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid $color-secondary-2-3;
+                }
+                padding-bottom: 0px;
+            }
+
+            section {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                background-color: transparent;
+            }
+
+            footer {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
+}

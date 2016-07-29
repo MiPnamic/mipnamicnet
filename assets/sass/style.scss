@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import 'libs/paletton';
+@import 'libs/vars';
+@import url('assets/libs/font-awesome/css/font-awesome.min.css');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,300,300italic);
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 20px 0 0 0;
+    margin: -20px 0 0 0;
+    height: 100%;
+    background-color: $color-primary-1;
+}
+
+header,
+section {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+a,
+a:active,
+a:hover,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+}
+
+a:hover {
+    color: $color-primary-1;
+}
+
+app {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main {
+    order: 2;
+    flex: 1;
+    flex-shrink: 0;
+    background-color: $white;
+    header, section {
+        margin: 0px;
+        padding: 20px;
+    }
+    header, section:nth-child(odd) {
+        background-color: $color-secondary-1-1;
+    }
+    section:nth-child(even) {
+        background-color: $color-primary-1;
+    }
+    .feature-icons {
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        li {
+            flex: 0 33%;
+            text-align: center;
+            list-style: none;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            i {
+                display: block;
+                margin: 10px;
+            }
+            i:before {
+                color: $color-primary-3;
+            }
+        }
+    }
+    article {
+        header {
+            background-color: $color-complement-1;
+        }
+    }
+    .features {
+        height: 310px;
+        display: flex;
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            //flex-shrink: 1;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            float: left;
+        }
+        //width: 1500px;
+        article {
+            border: 1px solid black;
+            height: 300px;
+            width: 500px;
+            flex: 0 0 auto;
+            header {
+                background-color: inherit;
+            }
+        }
+    }
+}
